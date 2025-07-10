@@ -25,19 +25,6 @@ header {
   width: 100%;
 }
 
-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
 .nav-link:hover {
   color: #ff9800 !important;
 }

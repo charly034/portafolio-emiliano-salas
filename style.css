@@ -1,0 +1,98 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* Barra de navegación */
+header {
+  background-color: #212529;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  right: 100;
+  display: inline-block;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff9800 !important;
+}
+.navbar-brand:hover {
+  color: #ff9800 !important;
+}
+
+/* Main */
+main {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+main p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+footer a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+/*mapa */
+.mapa {
+  border: 0;
+  max-width: 100%;
+}
+
+/* Imagenes*/
+.imagenes {
+  max-width: 100%;
+}

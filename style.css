@@ -1,85 +1,142 @@
-/* Reset básico */
+/* ===================== */
+/* 1. VARIABLES GENERALES */
+/* ===================== */
+:root {
+  --color-principal: #0d6efd;
+  --color-secundario: #f8f9fa;
+  --color-fondo: #ffffff;
+  --color-texto: #212529;
+  --color-texto-importante: #ff9800;
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================== */
+/* 2. RESET BÁSICO Y TIPOGRAFÍA */
+/* ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo general del body */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-secundario);
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 0 0px;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
-/* Barra de navegación */
-header {
-  background-color: #212529;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  right: 100;
-  display: inline-block;
-  width: 100%;
+/* ===================== */
+/* 3. ESTILOS DE NAVBAR */
+/* ===================== */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #ff9800 !important;
-}
-.navbar-brand:hover {
-  color: #ff9800 !important;
+  color: var(--color-texto-importante) !important;
+  scale: 1.1;
 }
 
-/* Main */
-main {
+/* ===================== */
+/* 4. ESTILOS DE IMÁGENES */
+/* ===================== */
+.imagenes {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== */
+/* 5. SECCIONES Y TÍTULOS */
+/* ===================== */
+section {
   max-width: 800px;
-  margin: 100px auto;
-  padding: 20px;
+  margin: 2rem auto;
+  padding: 1rem;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-main h1 {
-  margin-bottom: 20px;
-  font-size: 2em;
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: var(--color-principal);
   text-align: center;
 }
 
-main p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  text-align: justify;
+/* ===================== */
+/* 6. FORMULARIO CONTACTO */
+/* ===================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Footer */
+input,
+textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+/* ===================== */
+/* 7. IFRAME DE UBICACIÓN */
+/* ===================== */
+.mapa {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* ===================== */
+/* 8. FOOTER */
+/* ===================== */
 footer {
-  margin-top: 40px;
-  padding: 20px 0;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color-secundario);
   text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
 }
 
 footer a {
-  color: #ff9800;
+  color: var(--color-principal);
+  margin: 0 0.5rem;
   text-decoration: none;
-  margin: 0 10px;
 }
 
 footer a:hover {
-  color: #f9f9f9;
   text-decoration: underline;
-}
-/*mapa */
-.mapa {
-  border: 0;
-  max-width: 100%;
-}
-
-/* Imagenes*/
-.imagenes {
-  max-width: 100%;
 }

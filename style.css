@@ -45,7 +45,7 @@ body {
 
 .nav-link:hover {
   color: var(--color-texto-importante) !important;
-  scale: 1.1;
+  scale: 1.05;
 }
 
 /* ===================== */

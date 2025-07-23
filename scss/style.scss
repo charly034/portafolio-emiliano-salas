@@ -1,0 +1,141 @@
+
+/* ===================== */
+/* 1. VARIABLES GENERALES */
+/* ===================== */
+$color-principal: #0d6efd;
+$color-secundario: #f8f9fa;
+$color-fondo: #ffffff;
+$color-texto: #212529;
+$color-texto-importante: #ff9800;
+$fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+/* ===================== */
+/* 2. RESET BÁSICO Y TIPOGRAFÍA */
+/* ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fuente-principal;
+  color: $color-texto;
+  background-color: $color-secundario;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding: 0 1rem;
+}
+
+/* ===================== */
+/* 3. ESTILOS DE NAVBAR */
+/* ===================== */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .nav-link {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-texto-importante !important;
+      scale: 1.05;
+    }
+  }
+}
+
+/* ===================== */
+/* 4. ESTILOS DE IMÁGENES */
+/* ===================== */
+.imagenes {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== */
+/* 5. SECCIONES Y TÍTULOS */
+/* ===================== */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: $color-fondo;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: $color-principal;
+  text-align: center;
+}
+
+/* ===================== */
+/* 6. FORMULARIO CONTACTO */
+/* ===================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  input[type="submit"] {
+    background-color: $color-principal;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0b5ed7;
+    }
+  }
+}
+
+/* ===================== */
+/* 7. IFRAME DE UBICACIÓN */
+/* ===================== */
+.mapa {
+  width: 100%;
+  height: 300px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+/* ===================== */
+/* 8. FOOTER */
+/* ===================== */
+footer {
+  background-color: $color-secundario;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+
+  a {
+    color: $color-principal;
+    margin: 0 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

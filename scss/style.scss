@@ -1,16 +1,23 @@
-
 /* ===================== */
 /* 1. VARIABLES GENERALES */
 /* ===================== */
 $color-principal: #0d6efd;
 $color-secundario: #f8f9fa;
 $color-fondo: #ffffff;
+$color-fondo-hover: #e4e4e4;
 $color-texto: #212529;
 $color-texto-importante: #ff9800;
 $fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 /* ===================== */
-/* 2. RESET BÁSICO Y TIPOGRAFÍA */
+/* 2. MIXINS */
+/* ===================== */
+@mixin transicion-suave($prop: all, $tiempo: 0.3s, $tipo: ease-in-out) {
+  transition: $prop $tiempo $tipo;
+}
+
+/* ===================== */
+/* 3. RESET Y TIPOGRAFÍA */
 /* ===================== */
 * {
   margin: 0;
@@ -28,17 +35,23 @@ body {
 }
 
 /* ===================== */
-/* 3. ESTILOS DE NAVBAR */
+/* 4. NAVBAR */
 /* ===================== */
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   .navbar-brand {
     font-weight: bold;
+    @include transicion-suave;
+
+    &:hover {
+      color: $color-texto-importante !important;
+      scale: 1.05;
+    }
   }
 
   .nav-link {
-    transition: all 0.3s ease-in-out;
+    @include transicion-suave;
 
     &:hover {
       color: $color-texto-importante !important;
@@ -48,7 +61,7 @@ body {
 }
 
 /* ===================== */
-/* 4. ESTILOS DE IMÁGENES */
+/* 5. IMÁGENES */
 /* ===================== */
 .imagenes {
   max-width: 100%;
@@ -59,7 +72,7 @@ body {
 }
 
 /* ===================== */
-/* 5. SECCIONES Y TÍTULOS */
+/* 6. SECCIONES GENERALES */
 /* ===================== */
 section {
   max-width: 800px;
@@ -68,6 +81,12 @@ section {
   background-color: $color-fondo;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @include transicion-suave;
+
+  &:hover {
+    background-color: $color-fondo-hover;
+    scale: 1.01;
+  }
 }
 
 h1,
@@ -78,7 +97,7 @@ h2 {
 }
 
 /* ===================== */
-/* 6. FORMULARIO CONTACTO */
+/* 7. FORMULARIO CONTACTO */
 /* ===================== */
 form {
   display: flex;
@@ -100,7 +119,7 @@ form {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    @include transicion-suave(background);
 
     &:hover {
       background-color: #0b5ed7;
@@ -109,7 +128,7 @@ form {
 }
 
 /* ===================== */
-/* 7. IFRAME DE UBICACIÓN */
+/* 8. UBICACIÓN MAPA */
 /* ===================== */
 .mapa {
   width: 100%;
@@ -120,7 +139,7 @@ form {
 }
 
 /* ===================== */
-/* 8. FOOTER */
+/* 9. FOOTER */
 /* ===================== */
 footer {
   background-color: $color-secundario;
@@ -137,5 +156,39 @@ footer {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+/* ===================== */
+/* 10. TARJETAS DE FORMACIÓN , EXPERIENCIA y PORTAFOLIO*/
+/* ===================== */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.tarjeta {
+  background-color: $color-fondo;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  @include transicion-suave;
+
+  &:hover {
+    background-color: $color-fondo-hover;
+    transform: scale(1.02);
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+    color: $color-principal;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $color-texto;
   }
 }

@@ -1,17 +1,12 @@
+@charset "UTF-8";
 /* ===================== */
 /* 1. VARIABLES GENERALES */
 /* ===================== */
-:root {
-  --color-principal: #0d6efd;
-  --color-secundario: #f8f9fa;
-  --color-fondo: #ffffff;
-  --color-texto: #212529;
-  --color-texto-importante: #ff9800;
-  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 /* ===================== */
-/* 2. RESET BÁSICO Y TIPOGRAFÍA */
+/* 2. MIXINS */
+/* ===================== */
+/* ===================== */
+/* 3. RESET Y TIPOGRAFÍA */
 /* ===================== */
 * {
   margin: 0;
@@ -20,36 +15,38 @@
 }
 
 body {
-  font-family: var(--fuente-principal);
-  color: var(--color-texto);
-  background-color: var(--color-secundario);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+  background-color: #f8f9fa;
   line-height: 1.6;
   overflow-x: hidden;
   padding: 0 1rem;
 }
 
 /* ===================== */
-/* 3. ESTILOS DE NAVBAR */
+/* 4. NAVBAR */
 /* ===================== */
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.navbar-brand {
+.navbar .navbar-brand {
   font-weight: bold;
-}
-
-.nav-link {
   transition: all 0.3s ease-in-out;
 }
-
-.nav-link:hover {
-  color: var(--color-texto-importante) !important;
+.navbar .navbar-brand:hover {
+  color: #ff9800 !important;
+  scale: 1.05;
+}
+.navbar .nav-link {
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-link:hover {
+  color: #ff9800 !important;
   scale: 1.05;
 }
 
 /* ===================== */
-/* 4. ESTILOS DE IMÁGENES */
+/* 5. IMÁGENES */
 /* ===================== */
 .imagenes {
   max-width: 100%;
@@ -60,26 +57,31 @@ body {
 }
 
 /* ===================== */
-/* 5. SECCIONES Y TÍTULOS */
+/* 6. SECCIONES GENERALES */
 /* ===================== */
 section {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+section:hover {
+  background-color: #e4e4e4;
+  scale: 1.01;
 }
 
 h1,
 h2 {
   margin-bottom: 1rem;
-  color: var(--color-principal);
+  color: #0d6efd;
   text-align: center;
 }
 
 /* ===================== */
-/* 6. FORMULARIO CONTACTO */
+/* 7. FORMULARIO CONTACTO */
 /* ===================== */
 form {
   display: flex;
@@ -88,29 +90,26 @@ form {
   max-width: 500px;
   margin: 0 auto;
 }
-
-input,
-textarea {
+form input,
+form textarea {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
 }
-
-input[type="submit"] {
-  background-color: var(--color-principal);
+form input[type=submit] {
+  background-color: #0d6efd;
   color: white;
   border: none;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
 }
-
-input[type="submit"]:hover {
+form input[type=submit]:hover {
   background-color: #0b5ed7;
 }
 
 /* ===================== */
-/* 7. IFRAME DE UBICACIÓN */
+/* 8. UBICACIÓN MAPA */
 /* ===================== */
 .mapa {
   width: 100%;
@@ -121,22 +120,53 @@ input[type="submit"]:hover {
 }
 
 /* ===================== */
-/* 8. FOOTER */
+/* 9. FOOTER */
 /* ===================== */
 footer {
-  background-color: var(--color-secundario);
+  background-color: #f8f9fa;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
   border-top: 1px solid #ddd;
 }
-
 footer a {
-  color: var(--color-principal);
+  color: #0d6efd;
   margin: 0 0.5rem;
   text-decoration: none;
 }
-
 footer a:hover {
   text-decoration: underline;
 }
+
+/* ===================== */
+/* 10. TARJETAS DE FORMACIÓN Y EXPERIENCIA */
+/* ===================== */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.tarjeta:hover {
+  background-color: #e4e4e4;
+  transform: scale(1.02);
+}
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+  color: #0d6efd;
+}
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #212529;
+}
+
+/*# sourceMappingURL=style.css.map */

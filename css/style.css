@@ -137,6 +137,9 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+footer .autor {
+  font-size: 10px;
+}
 
 /* ===================== */
 /* 10. TARJETAS DE FORMACIÓN , EXPERIENCIA y PORTAFOLIO*/

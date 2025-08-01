@@ -163,6 +163,11 @@ footer .autor {
   background-color: #e4e4e4;
   transform: scale(1.02);
 }
+.tarjeta img {
+  width: 30px;
+  height: 30px;
+  margin: 12px;
+}
 .tarjeta h3 {
   margin-bottom: 0.5rem;
   color: #0d6efd;

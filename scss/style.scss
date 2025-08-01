@@ -184,7 +184,11 @@ footer {
     background-color: $color-fondo-hover;
     transform: scale(1.02);
   }
-
+  img {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+  }
   h3 {
     margin-bottom: 0.5rem;
     color: $color-principal;
